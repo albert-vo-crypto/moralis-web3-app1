@@ -1,0 +1,4927 @@
+{
+  "contractName": "StockRoomInterface",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_address",
+          "type": "address"
+        }
+      ],
+      "name": "setFiatContractAddress",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "string",
+          "name": "_name",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "_desc",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "_fiat",
+          "type": "string"
+        }
+      ],
+      "name": "createShop",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_shopId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_skuTypeId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_price",
+          "type": "uint256"
+        },
+        {
+          "internalType": "string",
+          "name": "_name",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "_desc",
+          "type": "string"
+        },
+        {
+          "internalType": "bool",
+          "name": "_consumable",
+          "type": "bool"
+        },
+        {
+          "internalType": "bool",
+          "name": "_limited",
+          "type": "bool"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_limit",
+          "type": "uint256"
+        }
+      ],
+      "name": "createSKU",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_shopId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "string",
+          "name": "_name",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "_desc",
+          "type": "string"
+        }
+      ],
+      "name": "createSKUType",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_skuId",
+          "type": "uint256"
+        }
+      ],
+      "name": "getPriceInEther",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_shopId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "convertEtherToShopFiat",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "convertEtherToFranchiseFiat",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "isStockRoom",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "pure",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_skuId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_itemCount",
+          "type": "uint256"
+        }
+      ],
+      "name": "canMintItem",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_skuId",
+          "type": "uint256"
+        }
+      ],
+      "name": "getSKU",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        },
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        },
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        },
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        },
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_skuTypeId",
+          "type": "uint256"
+        }
+      ],
+      "name": "getSKUTypeSKUIds",
+      "outputs": [
+        {
+          "internalType": "uint256[]",
+          "name": "",
+          "type": "uint256[]"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_shopId",
+          "type": "uint256"
+        }
+      ],
+      "name": "getSKUIds",
+      "outputs": [
+        {
+          "internalType": "uint256[]",
+          "name": "",
+          "type": "uint256[]"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_shopId",
+          "type": "uint256"
+        }
+      ],
+      "name": "getSKUTypeIds",
+      "outputs": [
+        {
+          "internalType": "uint256[]",
+          "name": "",
+          "type": "uint256[]"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_skuTypeId",
+          "type": "uint256"
+        }
+      ],
+      "name": "getSKUType",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        },
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_owner",
+          "type": "address"
+        }
+      ],
+      "name": "getShopIds",
+      "outputs": [
+        {
+          "internalType": "uint256[]",
+          "name": "",
+          "type": "uint256[]"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_shopId",
+          "type": "uint256"
+        }
+      ],
+      "name": "getShop",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        },
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_shopId",
+          "type": "uint256"
+        }
+      ],
+      "name": "getShopOwner",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.17+commit.d19bba13\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_skuId\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"_itemCount\",\"type\":\"uint256\"}],\"name\":\"canMintItem\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_amount\",\"type\":\"uint256\"}],\"name\":\"convertEtherToFranchiseFiat\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_shopId\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"_amount\",\"type\":\"uint256\"}],\"name\":\"convertEtherToShopFiat\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_shopId\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"_skuTypeId\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"_price\",\"type\":\"uint256\"},{\"internalType\":\"string\",\"name\":\"_name\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"_desc\",\"type\":\"string\"},{\"internalType\":\"bool\",\"name\":\"_consumable\",\"type\":\"bool\"},{\"internalType\":\"bool\",\"name\":\"_limited\",\"type\":\"bool\"},{\"internalType\":\"uint256\",\"name\":\"_limit\",\"type\":\"uint256\"}],\"name\":\"createSKU\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_shopId\",\"type\":\"uint256\"},{\"internalType\":\"string\",\"name\":\"_name\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"_desc\",\"type\":\"string\"}],\"name\":\"createSKUType\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"string\",\"name\":\"_name\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"_desc\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"_fiat\",\"type\":\"string\"}],\"name\":\"createShop\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_skuId\",\"type\":\"uint256\"}],\"name\":\"getPriceInEther\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_skuId\",\"type\":\"uint256\"}],\"name\":\"getSKU\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"},{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"},{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"},{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"},{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_shopId\",\"type\":\"uint256\"}],\"name\":\"getSKUIds\",\"outputs\":[{\"internalType\":\"uint256[]\",\"name\":\"\",\"type\":\"uint256[]\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_skuTypeId\",\"type\":\"uint256\"}],\"name\":\"getSKUType\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"},{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_shopId\",\"type\":\"uint256\"}],\"name\":\"getSKUTypeIds\",\"outputs\":[{\"internalType\":\"uint256[]\",\"name\":\"\",\"type\":\"uint256[]\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_skuTypeId\",\"type\":\"uint256\"}],\"name\":\"getSKUTypeSKUIds\",\"outputs\":[{\"internalType\":\"uint256[]\",\"name\":\"\",\"type\":\"uint256[]\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_shopId\",\"type\":\"uint256\"}],\"name\":\"getShop\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"},{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"address\",\"name\":\"_owner\",\"type\":\"address\"}],\"name\":\"getShopIds\",\"outputs\":[{\"internalType\":\"uint256[]\",\"name\":\"\",\"type\":\"uint256[]\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_shopId\",\"type\":\"uint256\"}],\"name\":\"getShopOwner\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"isStockRoom\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"pure\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"_address\",\"type\":\"address\"}],\"name\":\"setFiatContractAddress\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{},\"title\":\"StockRoomInterface\"},\"userdoc\":{\"methods\":{},\"notice\":\"Interface for StockRoom contract\"}},\"settings\":{\"compilationTarget\":{\"project:/contracts/StockRoomInterface.sol\":\"StockRoomInterface\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/StockRoomInterface.sol\":{\"keccak256\":\"0xc26659fd63c709575ac047322d0a5a3d3f0d1d76c110c5c6b80b295ee7ea6dec\",\"urls\":[\"bzz-raw://046b5e0fd52a8bdb83ffaba614709fed769e4545f9bcc8287c151a88ceec840b\",\"dweb:/ipfs/QmPzJYDma2Qq7dw26pnebruD7ebtGbWnfVhWhEgPu4G4H1\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "pragma solidity ^0.5.13;\n\n\n/**\n * @title StockRoomInterface\n * @notice Interface for StockRoom contract\n */\ninterface StockRoomInterface {\n\n    // @notice Set the address of the FiatContract contract\n    function setFiatContractAddress(address _address) external;\n\n    // @notice Create a Shop\n    function createShop(\n        string calldata _name,\n        string calldata _desc,\n        string calldata _fiat\n    ) external returns (uint256);\n\n    // @notice Create a SKU for a Shop\n    function createSKU(\n        uint256 _shopId,\n        uint256 _skuTypeId,\n        uint256 _price,\n        string calldata _name,\n        string calldata _desc,\n        bool _consumable,\n        bool _limited,\n        uint256 _limit\n    ) external returns(uint256);\n\n    // @notice Create a SKU Type for a Shop\n    function createSKUType(\n        uint256 _shopId,\n        string calldata _name,\n        string calldata _desc\n    ) external returns(uint256);\n\n    // @notice get an SKU's price in Ether\n    function getPriceInEther(uint256 _skuId) external view returns (uint256);\n\n    // @notice convert an Ether amount to a Shop's fiat currency\n    function convertEtherToShopFiat(uint256 _shopId, uint256 _amount) external view returns (uint256);\n\n    // @notice convert an Ether amount to the Franchise's fiat currency\n    function convertEtherToFranchiseFiat(uint256 _amount) external view returns (uint256);\n\n    // @notice confirm this is a StockRoom contract\n    function isStockRoom() external pure returns (bool);\n\n    // @notice confirm whether an item can be minted based on limit and current item count\n    function canMintItem(uint256 _skuId, uint256 _itemCount) external view returns (bool);\n\n    // @notice Get a SKU's properties by ID\n    function getSKU(uint256 _skuId) external view returns (uint256, uint256, uint256, uint256, string memory, string memory, bool, bool, uint256);\n\n    // @notice Get the list of SKU Ids associated with a given SKUType\n    function getSKUTypeSKUIds(uint256 _skuTypeId) external view returns (uint[] memory);\n\n    // @notice Get the list of SKU Ids associated with a given Shop\n    function getSKUIds(uint256 _shopId) external view returns (uint[] memory);\n\n    // @notice Get the list of SKU Type Ids associated with a given Shop\n    function getSKUTypeIds(uint256 _shopId) external view returns (uint[] memory);\n\n    // @notice Get a SKUType's properties by ID\n    function getSKUType(uint256 _skuTypeId) external view returns (uint256, uint256, string memory, string memory);\n\n    // @notice Get the list of Shop Ids associated with a given Owner\n    function getShopIds(address _owner) external view returns (uint[] memory);\n\n    // @notice Get a Shop's properties by ID\n    function getShop(uint256 _shopId) external view returns (address, uint256, string memory, string memory, string memory);\n\n    // @notice Get a Shop's owner\n    function getShopOwner(uint256 _shopId) external view returns (address);\n\n}",
+  "sourcePath": "/workspaces/vscode-remote-try-python/SIMPLE/in-app-pro-shop/contracts/StockRoomInterface.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/StockRoomInterface.sol",
+    "exportedSymbols": {
+      "StockRoomInterface": [
+        3694
+      ]
+    },
+    "id": 3695,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 3518,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".13"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:27"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": "@title StockRoomInterface\n@notice Interface for StockRoom contract",
+        "fullyImplemented": false,
+        "id": 3694,
+        "linearizedBaseContracts": [
+          3694
+        ],
+        "name": "StockRoomInterface",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": null,
+            "id": 3523,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setFiatContractAddress",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3521,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3520,
+                  "name": "_address",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3523,
+                  "src": "236:16:27",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 3519,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "236:7:27",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "235:18:27"
+            },
+            "returnParameters": {
+              "id": 3522,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "262:0:27"
+            },
+            "scope": 3694,
+            "src": "204:59:27",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": null,
+            "id": 3534,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "createShop",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3530,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3525,
+                  "name": "_name",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3534,
+                  "src": "327:21:27",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_calldata_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 3524,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "327:6:27",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3527,
+                  "name": "_desc",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3534,
+                  "src": "358:21:27",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_calldata_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 3526,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "358:6:27",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3529,
+                  "name": "_fiat",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3534,
+                  "src": "389:21:27",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_calldata_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 3528,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "389:6:27",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "317:99:27"
+            },
+            "returnParameters": {
+              "id": 3533,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3532,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3534,
+                  "src": "435:7:27",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3531,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "435:7:27",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "434:9:27"
+            },
+            "scope": 3694,
+            "src": "298:146:27",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": null,
+            "id": 3555,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "createSKU",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3551,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3536,
+                  "name": "_shopId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3555,
+                  "src": "517:15:27",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3535,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "517:7:27",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3538,
+                  "name": "_skuTypeId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3555,
+                  "src": "542:18:27",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3537,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "542:7:27",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3540,
+                  "name": "_price",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3555,
+                  "src": "570:14:27",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3539,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "570:7:27",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3542,
+                  "name": "_name",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3555,
+                  "src": "594:21:27",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_calldata_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 3541,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "594:6:27",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3544,
+                  "name": "_desc",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3555,
+                  "src": "625:21:27",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_calldata_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 3543,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "625:6:27",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3546,
+                  "name": "_consumable",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3555,
+                  "src": "656:16:27",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 3545,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "656:4:27",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3548,
+                  "name": "_limited",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3555,
+                  "src": "682:13:27",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 3547,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "682:4:27",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3550,
+                  "name": "_limit",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3555,
+                  "src": "705:14:27",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3549,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "705:7:27",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "507:218:27"
+            },
+            "returnParameters": {
+              "id": 3554,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3553,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3555,
+                  "src": "743:7:27",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3552,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "743:7:27",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "742:9:27"
+            },
+            "scope": 3694,
+            "src": "489:263:27",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": null,
+            "id": 3566,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "createSKUType",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3562,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3557,
+                  "name": "_shopId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3566,
+                  "src": "834:15:27",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3556,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "834:7:27",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3559,
+                  "name": "_name",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3566,
+                  "src": "859:21:27",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_calldata_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 3558,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "859:6:27",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3561,
+                  "name": "_desc",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3566,
+                  "src": "890:21:27",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_calldata_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 3560,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "890:6:27",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "824:93:27"
+            },
+            "returnParameters": {
+              "id": 3565,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3564,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3566,
+                  "src": "935:7:27",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3563,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "935:7:27",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "934:9:27"
+            },
+            "scope": 3694,
+            "src": "802:142:27",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": null,
+            "id": 3573,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getPriceInEther",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3569,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3568,
+                  "name": "_skuId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3573,
+                  "src": "1018:14:27",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3567,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1018:7:27",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1017:16:27"
+            },
+            "returnParameters": {
+              "id": 3572,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3571,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3573,
+                  "src": "1057:7:27",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3570,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1057:7:27",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1056:9:27"
+            },
+            "scope": 3694,
+            "src": "993:73:27",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": null,
+            "id": 3582,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "convertEtherToShopFiat",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3578,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3575,
+                  "name": "_shopId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3582,
+                  "src": "1169:15:27",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3574,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1169:7:27",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3577,
+                  "name": "_amount",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3582,
+                  "src": "1186:15:27",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3576,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1186:7:27",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1168:34:27"
+            },
+            "returnParameters": {
+              "id": 3581,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3580,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3582,
+                  "src": "1226:7:27",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3579,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1226:7:27",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1225:9:27"
+            },
+            "scope": 3694,
+            "src": "1137:98:27",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": null,
+            "id": 3589,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "convertEtherToFranchiseFiat",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3585,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3584,
+                  "name": "_amount",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3589,
+                  "src": "1350:15:27",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3583,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1350:7:27",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1349:17:27"
+            },
+            "returnParameters": {
+              "id": 3588,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3587,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3589,
+                  "src": "1390:7:27",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3586,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1390:7:27",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1389:9:27"
+            },
+            "scope": 3694,
+            "src": "1313:86:27",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": null,
+            "id": 3594,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "isStockRoom",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3590,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1477:2:27"
+            },
+            "returnParameters": {
+              "id": 3593,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3592,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3594,
+                  "src": "1503:4:27",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 3591,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1503:4:27",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1502:6:27"
+            },
+            "scope": 3694,
+            "src": "1457:52:27",
+            "stateMutability": "pure",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": null,
+            "id": 3603,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "canMintItem",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3599,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3596,
+                  "name": "_skuId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3603,
+                  "src": "1627:14:27",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3595,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1627:7:27",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3598,
+                  "name": "_itemCount",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3603,
+                  "src": "1643:18:27",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3597,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1643:7:27",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1626:36:27"
+            },
+            "returnParameters": {
+              "id": 3602,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3601,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3603,
+                  "src": "1686:4:27",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 3600,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1686:4:27",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1685:6:27"
+            },
+            "scope": 3694,
+            "src": "1606:86:27",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": null,
+            "id": 3626,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getSKU",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3606,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3605,
+                  "name": "_skuId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3626,
+                  "src": "1758:14:27",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3604,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1758:7:27",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1757:16:27"
+            },
+            "returnParameters": {
+              "id": 3625,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3608,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3626,
+                  "src": "1797:7:27",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3607,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1797:7:27",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3610,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3626,
+                  "src": "1806:7:27",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3609,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1806:7:27",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3612,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3626,
+                  "src": "1815:7:27",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3611,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1815:7:27",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3614,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3626,
+                  "src": "1824:7:27",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3613,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1824:7:27",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3616,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3626,
+                  "src": "1833:13:27",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 3615,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1833:6:27",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3618,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3626,
+                  "src": "1848:13:27",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 3617,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1848:6:27",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3620,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3626,
+                  "src": "1863:4:27",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 3619,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1863:4:27",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3622,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3626,
+                  "src": "1869:4:27",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 3621,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1869:4:27",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3624,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3626,
+                  "src": "1875:7:27",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3623,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1875:7:27",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1796:87:27"
+            },
+            "scope": 3694,
+            "src": "1742:142:27",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": null,
+            "id": 3634,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getSKUTypeSKUIds",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3629,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3628,
+                  "name": "_skuTypeId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3634,
+                  "src": "1987:18:27",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3627,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1987:7:27",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1986:20:27"
+            },
+            "returnParameters": {
+              "id": 3633,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3632,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3634,
+                  "src": "2030:13:27",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_uint256_$dyn_memory_ptr",
+                    "typeString": "uint256[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 3630,
+                      "name": "uint",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "2030:4:27",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "id": 3631,
+                    "length": null,
+                    "nodeType": "ArrayTypeName",
+                    "src": "2030:6:27",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
+                      "typeString": "uint256[]"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2029:15:27"
+            },
+            "scope": 3694,
+            "src": "1961:84:27",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": null,
+            "id": 3642,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getSKUIds",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3637,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3636,
+                  "name": "_shopId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3642,
+                  "src": "2138:15:27",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3635,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2138:7:27",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2137:17:27"
+            },
+            "returnParameters": {
+              "id": 3641,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3640,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3642,
+                  "src": "2178:13:27",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_uint256_$dyn_memory_ptr",
+                    "typeString": "uint256[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 3638,
+                      "name": "uint",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "2178:4:27",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "id": 3639,
+                    "length": null,
+                    "nodeType": "ArrayTypeName",
+                    "src": "2178:6:27",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
+                      "typeString": "uint256[]"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2177:15:27"
+            },
+            "scope": 3694,
+            "src": "2119:74:27",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": null,
+            "id": 3650,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getSKUTypeIds",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3645,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3644,
+                  "name": "_shopId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3650,
+                  "src": "2295:15:27",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3643,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2295:7:27",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2294:17:27"
+            },
+            "returnParameters": {
+              "id": 3649,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3648,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3650,
+                  "src": "2335:13:27",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_uint256_$dyn_memory_ptr",
+                    "typeString": "uint256[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 3646,
+                      "name": "uint",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "2335:4:27",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "id": 3647,
+                    "length": null,
+                    "nodeType": "ArrayTypeName",
+                    "src": "2335:6:27",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
+                      "typeString": "uint256[]"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2334:15:27"
+            },
+            "scope": 3694,
+            "src": "2272:78:27",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": null,
+            "id": 3663,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getSKUType",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3653,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3652,
+                  "name": "_skuTypeId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3663,
+                  "src": "2424:18:27",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3651,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2424:7:27",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2423:20:27"
+            },
+            "returnParameters": {
+              "id": 3662,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3655,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3663,
+                  "src": "2467:7:27",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3654,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2467:7:27",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3657,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3663,
+                  "src": "2476:7:27",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3656,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2476:7:27",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3659,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3663,
+                  "src": "2485:13:27",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 3658,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2485:6:27",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3661,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3663,
+                  "src": "2500:13:27",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 3660,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2500:6:27",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2466:48:27"
+            },
+            "scope": 3694,
+            "src": "2404:111:27",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": null,
+            "id": 3671,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getShopIds",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3666,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3665,
+                  "name": "_owner",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3671,
+                  "src": "2611:14:27",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 3664,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2611:7:27",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2610:16:27"
+            },
+            "returnParameters": {
+              "id": 3670,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3669,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3671,
+                  "src": "2650:13:27",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_uint256_$dyn_memory_ptr",
+                    "typeString": "uint256[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 3667,
+                      "name": "uint",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "2650:4:27",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "id": 3668,
+                    "length": null,
+                    "nodeType": "ArrayTypeName",
+                    "src": "2650:6:27",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
+                      "typeString": "uint256[]"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2649:15:27"
+            },
+            "scope": 3694,
+            "src": "2591:74:27",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": null,
+            "id": 3686,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getShop",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3674,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3673,
+                  "name": "_shopId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3686,
+                  "src": "2733:15:27",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3672,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2733:7:27",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2732:17:27"
+            },
+            "returnParameters": {
+              "id": 3685,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3676,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3686,
+                  "src": "2773:7:27",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 3675,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2773:7:27",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3678,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3686,
+                  "src": "2782:7:27",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3677,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2782:7:27",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3680,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3686,
+                  "src": "2791:13:27",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 3679,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2791:6:27",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3682,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3686,
+                  "src": "2806:13:27",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 3681,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2806:6:27",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3684,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3686,
+                  "src": "2821:13:27",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 3683,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2821:6:27",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2772:63:27"
+            },
+            "scope": 3694,
+            "src": "2716:120:27",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": null,
+            "id": 3693,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getShopOwner",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3689,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3688,
+                  "name": "_shopId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3693,
+                  "src": "2898:15:27",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3687,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2898:7:27",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2897:17:27"
+            },
+            "returnParameters": {
+              "id": 3692,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3691,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3693,
+                  "src": "2938:7:27",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 3690,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2938:7:27",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2937:9:27"
+            },
+            "scope": 3694,
+            "src": "2876:71:27",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 3695,
+        "src": "108:2842:27"
+      }
+    ],
+    "src": "0:2950:27"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "project:/contracts/StockRoomInterface.sol",
+      "exportedSymbols": {
+        "StockRoomInterface": [
+          3694
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            "^",
+            "0.5",
+            ".13"
+          ]
+        },
+        "id": 3518,
+        "name": "PragmaDirective",
+        "src": "0:24:27"
+      },
+      {
+        "attributes": {
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "interface",
+          "documentation": "@title StockRoomInterface\n@notice Interface for StockRoom contract",
+          "fullyImplemented": false,
+          "linearizedBaseContracts": [
+            3694
+          ],
+          "name": "StockRoomInterface",
+          "scope": 3695
+        },
+        "children": [
+          {
+            "attributes": {
+              "body": null,
+              "documentation": null,
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "setFiatContractAddress",
+              "scope": 3694,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_address",
+                      "scope": 3523,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 3519,
+                        "name": "ElementaryTypeName",
+                        "src": "236:7:27"
+                      }
+                    ],
+                    "id": 3520,
+                    "name": "VariableDeclaration",
+                    "src": "236:16:27"
+                  }
+                ],
+                "id": 3521,
+                "name": "ParameterList",
+                "src": "235:18:27"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 3522,
+                "name": "ParameterList",
+                "src": "262:0:27"
+              }
+            ],
+            "id": 3523,
+            "name": "FunctionDefinition",
+            "src": "204:59:27"
+          },
+          {
+            "attributes": {
+              "body": null,
+              "documentation": null,
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "createShop",
+              "scope": 3694,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_name",
+                      "scope": 3534,
+                      "stateVariable": false,
+                      "storageLocation": "calldata",
+                      "type": "string",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string"
+                        },
+                        "id": 3524,
+                        "name": "ElementaryTypeName",
+                        "src": "327:6:27"
+                      }
+                    ],
+                    "id": 3525,
+                    "name": "VariableDeclaration",
+                    "src": "327:21:27"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_desc",
+                      "scope": 3534,
+                      "stateVariable": false,
+                      "storageLocation": "calldata",
+                      "type": "string",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string"
+                        },
+                        "id": 3526,
+                        "name": "ElementaryTypeName",
+                        "src": "358:6:27"
+                      }
+                    ],
+                    "id": 3527,
+                    "name": "VariableDeclaration",
+                    "src": "358:21:27"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_fiat",
+                      "scope": 3534,
+                      "stateVariable": false,
+                      "storageLocation": "calldata",
+                      "type": "string",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string"
+                        },
+                        "id": 3528,
+                        "name": "ElementaryTypeName",
+                        "src": "389:6:27"
+                      }
+                    ],
+                    "id": 3529,
+                    "name": "VariableDeclaration",
+                    "src": "389:21:27"
+                  }
+                ],
+                "id": 3530,
+                "name": "ParameterList",
+                "src": "317:99:27"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 3534,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 3531,
+                        "name": "ElementaryTypeName",
+                        "src": "435:7:27"
+                      }
+                    ],
+                    "id": 3532,
+                    "name": "VariableDeclaration",
+                    "src": "435:7:27"
+                  }
+                ],
+                "id": 3533,
+                "name": "ParameterList",
+                "src": "434:9:27"
+              }
+            ],
+            "id": 3534,
+            "name": "FunctionDefinition",
+            "src": "298:146:27"
+          },
+          {
+            "attributes": {
+              "body": null,
+              "documentation": null,
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "createSKU",
+              "scope": 3694,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_shopId",
+                      "scope": 3555,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 3535,
+                        "name": "ElementaryTypeName",
+                        "src": "517:7:27"
+                      }
+                    ],
+                    "id": 3536,
+                    "name": "VariableDeclaration",
+                    "src": "517:15:27"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_skuTypeId",
+                      "scope": 3555,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 3537,
+                        "name": "ElementaryTypeName",
+                        "src": "542:7:27"
+                      }
+                    ],
+                    "id": 3538,
+                    "name": "VariableDeclaration",
+                    "src": "542:18:27"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_price",
+                      "scope": 3555,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 3539,
+                        "name": "ElementaryTypeName",
+                        "src": "570:7:27"
+                      }
+                    ],
+                    "id": 3540,
+                    "name": "VariableDeclaration",
+                    "src": "570:14:27"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_name",
+                      "scope": 3555,
+                      "stateVariable": false,
+                      "storageLocation": "calldata",
+                      "type": "string",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string"
+                        },
+                        "id": 3541,
+                        "name": "ElementaryTypeName",
+                        "src": "594:6:27"
+                      }
+                    ],
+                    "id": 3542,
+                    "name": "VariableDeclaration",
+                    "src": "594:21:27"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_desc",
+                      "scope": 3555,
+                      "stateVariable": false,
+                      "storageLocation": "calldata",
+                      "type": "string",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string"
+                        },
+                        "id": 3543,
+                        "name": "ElementaryTypeName",
+                        "src": "625:6:27"
+                      }
+                    ],
+                    "id": 3544,
+                    "name": "VariableDeclaration",
+                    "src": "625:21:27"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_consumable",
+                      "scope": 3555,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "bool",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bool",
+                          "type": "bool"
+                        },
+                        "id": 3545,
+                        "name": "ElementaryTypeName",
+                        "src": "656:4:27"
+                      }
+                    ],
+                    "id": 3546,
+                    "name": "VariableDeclaration",
+                    "src": "656:16:27"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_limited",
+                      "scope": 3555,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "bool",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bool",
+                          "type": "bool"
+                        },
+                        "id": 3547,
+                        "name": "ElementaryTypeName",
+                        "src": "682:4:27"
+                      }
+                    ],
+                    "id": 3548,
+                    "name": "VariableDeclaration",
+                    "src": "682:13:27"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_limit",
+                      "scope": 3555,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 3549,
+                        "name": "ElementaryTypeName",
+                        "src": "705:7:27"
+                      }
+                    ],
+                    "id": 3550,
+                    "name": "VariableDeclaration",
+                    "src": "705:14:27"
+                  }
+                ],
+                "id": 3551,
+                "name": "ParameterList",
+                "src": "507:218:27"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 3555,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 3552,
+                        "name": "ElementaryTypeName",
+                        "src": "743:7:27"
+                      }
+                    ],
+                    "id": 3553,
+                    "name": "VariableDeclaration",
+                    "src": "743:7:27"
+                  }
+                ],
+                "id": 3554,
+                "name": "ParameterList",
+                "src": "742:9:27"
+              }
+            ],
+            "id": 3555,
+            "name": "FunctionDefinition",
+            "src": "489:263:27"
+          },
+          {
+            "attributes": {
+              "body": null,
+              "documentation": null,
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "createSKUType",
+              "scope": 3694,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_shopId",
+                      "scope": 3566,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 3556,
+                        "name": "ElementaryTypeName",
+                        "src": "834:7:27"
+                      }
+                    ],
+                    "id": 3557,
+                    "name": "VariableDeclaration",
+                    "src": "834:15:27"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_name",
+                      "scope": 3566,
+                      "stateVariable": false,
+                      "storageLocation": "calldata",
+                      "type": "string",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string"
+                        },
+                        "id": 3558,
+                        "name": "ElementaryTypeName",
+                        "src": "859:6:27"
+                      }
+                    ],
+                    "id": 3559,
+                    "name": "VariableDeclaration",
+                    "src": "859:21:27"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_desc",
+                      "scope": 3566,
+                      "stateVariable": false,
+                      "storageLocation": "calldata",
+                      "type": "string",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string"
+                        },
+                        "id": 3560,
+                        "name": "ElementaryTypeName",
+                        "src": "890:6:27"
+                      }
+                    ],
+                    "id": 3561,
+                    "name": "VariableDeclaration",
+                    "src": "890:21:27"
+                  }
+                ],
+                "id": 3562,
+                "name": "ParameterList",
+                "src": "824:93:27"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 3566,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 3563,
+                        "name": "ElementaryTypeName",
+                        "src": "935:7:27"
+                      }
+                    ],
+                    "id": 3564,
+                    "name": "VariableDeclaration",
+                    "src": "935:7:27"
+                  }
+                ],
+                "id": 3565,
+                "name": "ParameterList",
+                "src": "934:9:27"
+              }
+            ],
+            "id": 3566,
+            "name": "FunctionDefinition",
+            "src": "802:142:27"
+          },
+          {
+            "attributes": {
+              "body": null,
+              "documentation": null,
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "getPriceInEther",
+              "scope": 3694,
+              "stateMutability": "view",
+              "superFunction": null,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_skuId",
+                      "scope": 3573,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 3567,
+                        "name": "ElementaryTypeName",
+                        "src": "1018:7:27"
+                      }
+                    ],
+                    "id": 3568,
+                    "name": "VariableDeclaration",
+                    "src": "1018:14:27"
+                  }
+                ],
+                "id": 3569,
+                "name": "ParameterList",
+                "src": "1017:16:27"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 3573,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 3570,
+                        "name": "ElementaryTypeName",
+                        "src": "1057:7:27"
+                      }
+                    ],
+                    "id": 3571,
+                    "name": "VariableDeclaration",
+                    "src": "1057:7:27"
+                  }
+                ],
+                "id": 3572,
+                "name": "ParameterList",
+                "src": "1056:9:27"
+              }
+            ],
+            "id": 3573,
+            "name": "FunctionDefinition",
+            "src": "993:73:27"
+          },
+          {
+            "attributes": {
+              "body": null,
+              "documentation": null,
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "convertEtherToShopFiat",
+              "scope": 3694,
+              "stateMutability": "view",
+              "superFunction": null,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_shopId",
+                      "scope": 3582,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 3574,
+                        "name": "ElementaryTypeName",
+                        "src": "1169:7:27"
+                      }
+                    ],
+                    "id": 3575,
+                    "name": "VariableDeclaration",
+                    "src": "1169:15:27"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_amount",
+                      "scope": 3582,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 3576,
+                        "name": "ElementaryTypeName",
+                        "src": "1186:7:27"
+                      }
+                    ],
+                    "id": 3577,
+                    "name": "VariableDeclaration",
+                    "src": "1186:15:27"
+                  }
+                ],
+                "id": 3578,
+                "name": "ParameterList",
+                "src": "1168:34:27"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 3582,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 3579,
+                        "name": "ElementaryTypeName",
+                        "src": "1226:7:27"
+                      }
+                    ],
+                    "id": 3580,
+                    "name": "VariableDeclaration",
+                    "src": "1226:7:27"
+                  }
+                ],
+                "id": 3581,
+                "name": "ParameterList",
+                "src": "1225:9:27"
+              }
+            ],
+            "id": 3582,
+            "name": "FunctionDefinition",
+            "src": "1137:98:27"
+          },
+          {
+            "attributes": {
+              "body": null,
+              "documentation": null,
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "convertEtherToFranchiseFiat",
+              "scope": 3694,
+              "stateMutability": "view",
+              "superFunction": null,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_amount",
+                      "scope": 3589,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 3583,
+                        "name": "ElementaryTypeName",
+                        "src": "1350:7:27"
+                      }
+                    ],
+                    "id": 3584,
+                    "name": "VariableDeclaration",
+                    "src": "1350:15:27"
+                  }
+                ],
+                "id": 3585,
+                "name": "ParameterList",
+                "src": "1349:17:27"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 3589,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 3586,
+                        "name": "ElementaryTypeName",
+                        "src": "1390:7:27"
+                      }
+                    ],
+                    "id": 3587,
+                    "name": "VariableDeclaration",
+                    "src": "1390:7:27"
+                  }
+                ],
+                "id": 3588,
+                "name": "ParameterList",
+                "src": "1389:9:27"
+              }
+            ],
+            "id": 3589,
+            "name": "FunctionDefinition",
+            "src": "1313:86:27"
+          },
+          {
+            "attributes": {
+              "body": null,
+              "documentation": null,
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "isStockRoom",
+              "scope": 3694,
+              "stateMutability": "pure",
+              "superFunction": null,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 3590,
+                "name": "ParameterList",
+                "src": "1477:2:27"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 3594,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "bool",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bool",
+                          "type": "bool"
+                        },
+                        "id": 3591,
+                        "name": "ElementaryTypeName",
+                        "src": "1503:4:27"
+                      }
+                    ],
+                    "id": 3592,
+                    "name": "VariableDeclaration",
+                    "src": "1503:4:27"
+                  }
+                ],
+                "id": 3593,
+                "name": "ParameterList",
+                "src": "1502:6:27"
+              }
+            ],
+            "id": 3594,
+            "name": "FunctionDefinition",
+            "src": "1457:52:27"
+          },
+          {
+            "attributes": {
+              "body": null,
+              "documentation": null,
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "canMintItem",
+              "scope": 3694,
+              "stateMutability": "view",
+              "superFunction": null,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_skuId",
+                      "scope": 3603,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 3595,
+                        "name": "ElementaryTypeName",
+                        "src": "1627:7:27"
+                      }
+                    ],
+                    "id": 3596,
+                    "name": "VariableDeclaration",
+                    "src": "1627:14:27"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_itemCount",
+                      "scope": 3603,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 3597,
+                        "name": "ElementaryTypeName",
+                        "src": "1643:7:27"
+                      }
+                    ],
+                    "id": 3598,
+                    "name": "VariableDeclaration",
+                    "src": "1643:18:27"
+                  }
+                ],
+                "id": 3599,
+                "name": "ParameterList",
+                "src": "1626:36:27"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 3603,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "bool",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bool",
+                          "type": "bool"
+                        },
+                        "id": 3600,
+                        "name": "ElementaryTypeName",
+                        "src": "1686:4:27"
+                      }
+                    ],
+                    "id": 3601,
+                    "name": "VariableDeclaration",
+                    "src": "1686:4:27"
+                  }
+                ],
+                "id": 3602,
+                "name": "ParameterList",
+                "src": "1685:6:27"
+              }
+            ],
+            "id": 3603,
+            "name": "FunctionDefinition",
+            "src": "1606:86:27"
+          },
+          {
+            "attributes": {
+              "body": null,
+              "documentation": null,
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "getSKU",
+              "scope": 3694,
+              "stateMutability": "view",
+              "superFunction": null,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_skuId",
+                      "scope": 3626,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 3604,
+                        "name": "ElementaryTypeName",
+                        "src": "1758:7:27"
+                      }
+                    ],
+                    "id": 3605,
+                    "name": "VariableDeclaration",
+                    "src": "1758:14:27"
+                  }
+                ],
+                "id": 3606,
+                "name": "ParameterList",
+                "src": "1757:16:27"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 3626,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 3607,
+                        "name": "ElementaryTypeName",
+                        "src": "1797:7:27"
+                      }
+                    ],
+                    "id": 3608,
+                    "name": "VariableDeclaration",
+                    "src": "1797:7:27"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 3626,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 3609,
+                        "name": "ElementaryTypeName",
+                        "src": "1806:7:27"
+                      }
+                    ],
+                    "id": 3610,
+                    "name": "VariableDeclaration",
+                    "src": "1806:7:27"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 3626,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 3611,
+                        "name": "ElementaryTypeName",
+                        "src": "1815:7:27"
+                      }
+                    ],
+                    "id": 3612,
+                    "name": "VariableDeclaration",
+                    "src": "1815:7:27"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 3626,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 3613,
+                        "name": "ElementaryTypeName",
+                        "src": "1824:7:27"
+                      }
+                    ],
+                    "id": 3614,
+                    "name": "VariableDeclaration",
+                    "src": "1824:7:27"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 3626,
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "type": "string",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string"
+                        },
+                        "id": 3615,
+                        "name": "ElementaryTypeName",
+                        "src": "1833:6:27"
+                      }
+                    ],
+                    "id": 3616,
+                    "name": "VariableDeclaration",
+                    "src": "1833:13:27"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 3626,
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "type": "string",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string"
+                        },
+                        "id": 3617,
+                        "name": "ElementaryTypeName",
+                        "src": "1848:6:27"
+                      }
+                    ],
+                    "id": 3618,
+                    "name": "VariableDeclaration",
+                    "src": "1848:13:27"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 3626,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "bool",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bool",
+                          "type": "bool"
+                        },
+                        "id": 3619,
+                        "name": "ElementaryTypeName",
+                        "src": "1863:4:27"
+                      }
+                    ],
+                    "id": 3620,
+                    "name": "VariableDeclaration",
+                    "src": "1863:4:27"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 3626,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "bool",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bool",
+                          "type": "bool"
+                        },
+                        "id": 3621,
+                        "name": "ElementaryTypeName",
+                        "src": "1869:4:27"
+                      }
+                    ],
+                    "id": 3622,
+                    "name": "VariableDeclaration",
+                    "src": "1869:4:27"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 3626,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 3623,
+                        "name": "ElementaryTypeName",
+                        "src": "1875:7:27"
+                      }
+                    ],
+                    "id": 3624,
+                    "name": "VariableDeclaration",
+                    "src": "1875:7:27"
+                  }
+                ],
+                "id": 3625,
+                "name": "ParameterList",
+                "src": "1796:87:27"
+              }
+            ],
+            "id": 3626,
+            "name": "FunctionDefinition",
+            "src": "1742:142:27"
+          },
+          {
+            "attributes": {
+              "body": null,
+              "documentation": null,
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "getSKUTypeSKUIds",
+              "scope": 3694,
+              "stateMutability": "view",
+              "superFunction": null,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_skuTypeId",
+                      "scope": 3634,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 3627,
+                        "name": "ElementaryTypeName",
+                        "src": "1987:7:27"
+                      }
+                    ],
+                    "id": 3628,
+                    "name": "VariableDeclaration",
+                    "src": "1987:18:27"
+                  }
+                ],
+                "id": 3629,
+                "name": "ParameterList",
+                "src": "1986:20:27"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 3634,
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "type": "uint256[]",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "length": null,
+                          "type": "uint256[]"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "name": "uint",
+                              "type": "uint256"
+                            },
+                            "id": 3630,
+                            "name": "ElementaryTypeName",
+                            "src": "2030:4:27"
+                          }
+                        ],
+                        "id": 3631,
+                        "name": "ArrayTypeName",
+                        "src": "2030:6:27"
+                      }
+                    ],
+                    "id": 3632,
+                    "name": "VariableDeclaration",
+                    "src": "2030:13:27"
+                  }
+                ],
+                "id": 3633,
+                "name": "ParameterList",
+                "src": "2029:15:27"
+              }
+            ],
+            "id": 3634,
+            "name": "FunctionDefinition",
+            "src": "1961:84:27"
+          },
+          {
+            "attributes": {
+              "body": null,
+              "documentation": null,
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "getSKUIds",
+              "scope": 3694,
+              "stateMutability": "view",
+              "superFunction": null,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_shopId",
+                      "scope": 3642,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 3635,
+                        "name": "ElementaryTypeName",
+                        "src": "2138:7:27"
+                      }
+                    ],
+                    "id": 3636,
+                    "name": "VariableDeclaration",
+                    "src": "2138:15:27"
+                  }
+                ],
+                "id": 3637,
+                "name": "ParameterList",
+                "src": "2137:17:27"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 3642,
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "type": "uint256[]",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "length": null,
+                          "type": "uint256[]"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "name": "uint",
+                              "type": "uint256"
+                            },
+                            "id": 3638,
+                            "name": "ElementaryTypeName",
+                            "src": "2178:4:27"
+                          }
+                        ],
+                        "id": 3639,
+                        "name": "ArrayTypeName",
+                        "src": "2178:6:27"
+                      }
+                    ],
+                    "id": 3640,
+                    "name": "VariableDeclaration",
+                    "src": "2178:13:27"
+                  }
+                ],
+                "id": 3641,
+                "name": "ParameterList",
+                "src": "2177:15:27"
+              }
+            ],
+            "id": 3642,
+            "name": "FunctionDefinition",
+            "src": "2119:74:27"
+          },
+          {
+            "attributes": {
+              "body": null,
+              "documentation": null,
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "getSKUTypeIds",
+              "scope": 3694,
+              "stateMutability": "view",
+              "superFunction": null,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_shopId",
+                      "scope": 3650,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 3643,
+                        "name": "ElementaryTypeName",
+                        "src": "2295:7:27"
+                      }
+                    ],
+                    "id": 3644,
+                    "name": "VariableDeclaration",
+                    "src": "2295:15:27"
+                  }
+                ],
+                "id": 3645,
+                "name": "ParameterList",
+                "src": "2294:17:27"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 3650,
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "type": "uint256[]",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "length": null,
+                          "type": "uint256[]"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "name": "uint",
+                              "type": "uint256"
+                            },
+                            "id": 3646,
+                            "name": "ElementaryTypeName",
+                            "src": "2335:4:27"
+                          }
+                        ],
+                        "id": 3647,
+                        "name": "ArrayTypeName",
+                        "src": "2335:6:27"
+                      }
+                    ],
+                    "id": 3648,
+                    "name": "VariableDeclaration",
+                    "src": "2335:13:27"
+                  }
+                ],
+                "id": 3649,
+                "name": "ParameterList",
+                "src": "2334:15:27"
+              }
+            ],
+            "id": 3650,
+            "name": "FunctionDefinition",
+            "src": "2272:78:27"
+          },
+          {
+            "attributes": {
+              "body": null,
+              "documentation": null,
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "getSKUType",
+              "scope": 3694,
+              "stateMutability": "view",
+              "superFunction": null,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_skuTypeId",
+                      "scope": 3663,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 3651,
+                        "name": "ElementaryTypeName",
+                        "src": "2424:7:27"
+                      }
+                    ],
+                    "id": 3652,
+                    "name": "VariableDeclaration",
+                    "src": "2424:18:27"
+                  }
+                ],
+                "id": 3653,
+                "name": "ParameterList",
+                "src": "2423:20:27"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 3663,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 3654,
+                        "name": "ElementaryTypeName",
+                        "src": "2467:7:27"
+                      }
+                    ],
+                    "id": 3655,
+                    "name": "VariableDeclaration",
+                    "src": "2467:7:27"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 3663,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 3656,
+                        "name": "ElementaryTypeName",
+                        "src": "2476:7:27"
+                      }
+                    ],
+                    "id": 3657,
+                    "name": "VariableDeclaration",
+                    "src": "2476:7:27"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 3663,
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "type": "string",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string"
+                        },
+                        "id": 3658,
+                        "name": "ElementaryTypeName",
+                        "src": "2485:6:27"
+                      }
+                    ],
+                    "id": 3659,
+                    "name": "VariableDeclaration",
+                    "src": "2485:13:27"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 3663,
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "type": "string",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string"
+                        },
+                        "id": 3660,
+                        "name": "ElementaryTypeName",
+                        "src": "2500:6:27"
+                      }
+                    ],
+                    "id": 3661,
+                    "name": "VariableDeclaration",
+                    "src": "2500:13:27"
+                  }
+                ],
+                "id": 3662,
+                "name": "ParameterList",
+                "src": "2466:48:27"
+              }
+            ],
+            "id": 3663,
+            "name": "FunctionDefinition",
+            "src": "2404:111:27"
+          },
+          {
+            "attributes": {
+              "body": null,
+              "documentation": null,
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "getShopIds",
+              "scope": 3694,
+              "stateMutability": "view",
+              "superFunction": null,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_owner",
+                      "scope": 3671,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 3664,
+                        "name": "ElementaryTypeName",
+                        "src": "2611:7:27"
+                      }
+                    ],
+                    "id": 3665,
+                    "name": "VariableDeclaration",
+                    "src": "2611:14:27"
+                  }
+                ],
+                "id": 3666,
+                "name": "ParameterList",
+                "src": "2610:16:27"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 3671,
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "type": "uint256[]",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "length": null,
+                          "type": "uint256[]"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "name": "uint",
+                              "type": "uint256"
+                            },
+                            "id": 3667,
+                            "name": "ElementaryTypeName",
+                            "src": "2650:4:27"
+                          }
+                        ],
+                        "id": 3668,
+                        "name": "ArrayTypeName",
+                        "src": "2650:6:27"
+                      }
+                    ],
+                    "id": 3669,
+                    "name": "VariableDeclaration",
+                    "src": "2650:13:27"
+                  }
+                ],
+                "id": 3670,
+                "name": "ParameterList",
+                "src": "2649:15:27"
+              }
+            ],
+            "id": 3671,
+            "name": "FunctionDefinition",
+            "src": "2591:74:27"
+          },
+          {
+            "attributes": {
+              "body": null,
+              "documentation": null,
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "getShop",
+              "scope": 3694,
+              "stateMutability": "view",
+              "superFunction": null,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_shopId",
+                      "scope": 3686,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 3672,
+                        "name": "ElementaryTypeName",
+                        "src": "2733:7:27"
+                      }
+                    ],
+                    "id": 3673,
+                    "name": "VariableDeclaration",
+                    "src": "2733:15:27"
+                  }
+                ],
+                "id": 3674,
+                "name": "ParameterList",
+                "src": "2732:17:27"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 3686,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 3675,
+                        "name": "ElementaryTypeName",
+                        "src": "2773:7:27"
+                      }
+                    ],
+                    "id": 3676,
+                    "name": "VariableDeclaration",
+                    "src": "2773:7:27"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 3686,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 3677,
+                        "name": "ElementaryTypeName",
+                        "src": "2782:7:27"
+                      }
+                    ],
+                    "id": 3678,
+                    "name": "VariableDeclaration",
+                    "src": "2782:7:27"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 3686,
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "type": "string",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string"
+                        },
+                        "id": 3679,
+                        "name": "ElementaryTypeName",
+                        "src": "2791:6:27"
+                      }
+                    ],
+                    "id": 3680,
+                    "name": "VariableDeclaration",
+                    "src": "2791:13:27"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 3686,
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "type": "string",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string"
+                        },
+                        "id": 3681,
+                        "name": "ElementaryTypeName",
+                        "src": "2806:6:27"
+                      }
+                    ],
+                    "id": 3682,
+                    "name": "VariableDeclaration",
+                    "src": "2806:13:27"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 3686,
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "type": "string",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string"
+                        },
+                        "id": 3683,
+                        "name": "ElementaryTypeName",
+                        "src": "2821:6:27"
+                      }
+                    ],
+                    "id": 3684,
+                    "name": "VariableDeclaration",
+                    "src": "2821:13:27"
+                  }
+                ],
+                "id": 3685,
+                "name": "ParameterList",
+                "src": "2772:63:27"
+              }
+            ],
+            "id": 3686,
+            "name": "FunctionDefinition",
+            "src": "2716:120:27"
+          },
+          {
+            "attributes": {
+              "body": null,
+              "documentation": null,
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "getShopOwner",
+              "scope": 3694,
+              "stateMutability": "view",
+              "superFunction": null,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_shopId",
+                      "scope": 3693,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 3687,
+                        "name": "ElementaryTypeName",
+                        "src": "2898:7:27"
+                      }
+                    ],
+                    "id": 3688,
+                    "name": "VariableDeclaration",
+                    "src": "2898:15:27"
+                  }
+                ],
+                "id": 3689,
+                "name": "ParameterList",
+                "src": "2897:17:27"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 3693,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 3690,
+                        "name": "ElementaryTypeName",
+                        "src": "2938:7:27"
+                      }
+                    ],
+                    "id": 3691,
+                    "name": "VariableDeclaration",
+                    "src": "2938:7:27"
+                  }
+                ],
+                "id": 3692,
+                "name": "ParameterList",
+                "src": "2937:9:27"
+              }
+            ],
+            "id": 3693,
+            "name": "FunctionDefinition",
+            "src": "2876:71:27"
+          }
+        ],
+        "id": 3694,
+        "name": "ContractDefinition",
+        "src": "108:2842:27"
+      }
+    ],
+    "id": 3695,
+    "name": "SourceUnit",
+    "src": "0:2950:27"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.17+commit.d19bba13.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.6",
+  "updatedAt": "2022-03-26T02:07:00.405Z",
+  "devdoc": {
+    "methods": {},
+    "title": "StockRoomInterface"
+  },
+  "userdoc": {
+    "methods": {},
+    "notice": "Interface for StockRoom contract"
+  }
+}

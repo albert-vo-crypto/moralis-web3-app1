@@ -1,0 +1,1069 @@
+{
+  "contractName": "FiatContractInterface",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_id",
+          "type": "uint256"
+        }
+      ],
+      "name": "ETH",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_id",
+          "type": "uint256"
+        }
+      ],
+      "name": "USD",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_id",
+          "type": "uint256"
+        }
+      ],
+      "name": "EUR",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_id",
+          "type": "uint256"
+        }
+      ],
+      "name": "GBP",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_id",
+          "type": "uint256"
+        }
+      ],
+      "name": "updatedAt",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.17+commit.d19bba13\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_id\",\"type\":\"uint256\"}],\"name\":\"ETH\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_id\",\"type\":\"uint256\"}],\"name\":\"EUR\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_id\",\"type\":\"uint256\"}],\"name\":\"GBP\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_id\",\"type\":\"uint256\"}],\"name\":\"USD\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_id\",\"type\":\"uint256\"}],\"name\":\"updatedAt\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{},\"title\":\"FiatContractInterface\"},\"userdoc\":{\"methods\":{},\"notice\":\"Interface for third-party contract FiatContract (see: https://fiatcontract.com/)\"}},\"settings\":{\"compilationTarget\":{\"project:/contracts/FiatContractInterface.sol\":\"FiatContractInterface\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/FiatContractInterface.sol\":{\"keccak256\":\"0xcb57112f8f9c58e107a7d664138c8f71130d41631c3bd725a238a5d9ad51625d\",\"urls\":[\"bzz-raw://116865c01d0543f31ae5290750bf298a7311f785c2b5991126db1343f2d0a912\",\"dweb:/ipfs/QmYN7EgMX9G3DEmg1WsPM59PwZcCuomo3mVbCKK78HAfnN\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "pragma solidity ^0.5.13;\n\n\n/**\n * @title FiatContractInterface\n * @notice Interface for third-party contract FiatContract (see: https://fiatcontract.com/)\n */\ninterface  FiatContractInterface {\n\n    function ETH(uint _id) external view returns (uint256);\n\n    function USD(uint _id) external view returns (uint256);\n\n    function EUR(uint _id) external view returns (uint256);\n\n    function GBP(uint _id) external view returns (uint256);\n\n    function updatedAt(uint _id) external view returns (uint);\n}\n",
+  "sourcePath": "/workspaces/vscode-remote-try-python/SIMPLE/in-app-pro-shop/contracts/FiatContractInterface.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/FiatContractInterface.sol",
+    "exportedSymbols": {
+      "FiatContractInterface": [
+        2204
+      ]
+    },
+    "id": 2205,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 2168,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".13"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:17"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": "@title FiatContractInterface\n@notice Interface for third-party contract FiatContract (see: https://fiatcontract.com/)",
+        "fullyImplemented": false,
+        "id": 2204,
+        "linearizedBaseContracts": [
+          2204
+        ],
+        "name": "FiatContractInterface",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": null,
+            "id": 2175,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "ETH",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2171,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2170,
+                  "name": "_id",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2175,
+                  "src": "212:8:17",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 2169,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "212:4:17",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "211:10:17"
+            },
+            "returnParameters": {
+              "id": 2174,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2173,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2175,
+                  "src": "245:7:17",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 2172,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "245:7:17",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "244:9:17"
+            },
+            "scope": 2204,
+            "src": "199:55:17",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": null,
+            "id": 2182,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "USD",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2178,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2177,
+                  "name": "_id",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2182,
+                  "src": "273:8:17",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 2176,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "273:4:17",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "272:10:17"
+            },
+            "returnParameters": {
+              "id": 2181,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2180,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2182,
+                  "src": "306:7:17",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 2179,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "306:7:17",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "305:9:17"
+            },
+            "scope": 2204,
+            "src": "260:55:17",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": null,
+            "id": 2189,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "EUR",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2185,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2184,
+                  "name": "_id",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2189,
+                  "src": "334:8:17",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 2183,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "334:4:17",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "333:10:17"
+            },
+            "returnParameters": {
+              "id": 2188,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2187,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2189,
+                  "src": "367:7:17",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 2186,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "367:7:17",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "366:9:17"
+            },
+            "scope": 2204,
+            "src": "321:55:17",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": null,
+            "id": 2196,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "GBP",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2192,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2191,
+                  "name": "_id",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2196,
+                  "src": "395:8:17",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 2190,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "395:4:17",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "394:10:17"
+            },
+            "returnParameters": {
+              "id": 2195,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2194,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2196,
+                  "src": "428:7:17",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 2193,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "428:7:17",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "427:9:17"
+            },
+            "scope": 2204,
+            "src": "382:55:17",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": null,
+            "id": 2203,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "updatedAt",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2199,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2198,
+                  "name": "_id",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2203,
+                  "src": "462:8:17",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 2197,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "462:4:17",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "461:10:17"
+            },
+            "returnParameters": {
+              "id": 2202,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2201,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2203,
+                  "src": "495:4:17",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 2200,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "495:4:17",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "494:6:17"
+            },
+            "scope": 2204,
+            "src": "443:58:17",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 2205,
+        "src": "159:344:17"
+      }
+    ],
+    "src": "0:504:17"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "project:/contracts/FiatContractInterface.sol",
+      "exportedSymbols": {
+        "FiatContractInterface": [
+          2204
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            "^",
+            "0.5",
+            ".13"
+          ]
+        },
+        "id": 2168,
+        "name": "PragmaDirective",
+        "src": "0:24:17"
+      },
+      {
+        "attributes": {
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "interface",
+          "documentation": "@title FiatContractInterface\n@notice Interface for third-party contract FiatContract (see: https://fiatcontract.com/)",
+          "fullyImplemented": false,
+          "linearizedBaseContracts": [
+            2204
+          ],
+          "name": "FiatContractInterface",
+          "scope": 2205
+        },
+        "children": [
+          {
+            "attributes": {
+              "body": null,
+              "documentation": null,
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "ETH",
+              "scope": 2204,
+              "stateMutability": "view",
+              "superFunction": null,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_id",
+                      "scope": 2175,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint",
+                          "type": "uint256"
+                        },
+                        "id": 2169,
+                        "name": "ElementaryTypeName",
+                        "src": "212:4:17"
+                      }
+                    ],
+                    "id": 2170,
+                    "name": "VariableDeclaration",
+                    "src": "212:8:17"
+                  }
+                ],
+                "id": 2171,
+                "name": "ParameterList",
+                "src": "211:10:17"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 2175,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 2172,
+                        "name": "ElementaryTypeName",
+                        "src": "245:7:17"
+                      }
+                    ],
+                    "id": 2173,
+                    "name": "VariableDeclaration",
+                    "src": "245:7:17"
+                  }
+                ],
+                "id": 2174,
+                "name": "ParameterList",
+                "src": "244:9:17"
+              }
+            ],
+            "id": 2175,
+            "name": "FunctionDefinition",
+            "src": "199:55:17"
+          },
+          {
+            "attributes": {
+              "body": null,
+              "documentation": null,
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "USD",
+              "scope": 2204,
+              "stateMutability": "view",
+              "superFunction": null,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_id",
+                      "scope": 2182,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint",
+                          "type": "uint256"
+                        },
+                        "id": 2176,
+                        "name": "ElementaryTypeName",
+                        "src": "273:4:17"
+                      }
+                    ],
+                    "id": 2177,
+                    "name": "VariableDeclaration",
+                    "src": "273:8:17"
+                  }
+                ],
+                "id": 2178,
+                "name": "ParameterList",
+                "src": "272:10:17"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 2182,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 2179,
+                        "name": "ElementaryTypeName",
+                        "src": "306:7:17"
+                      }
+                    ],
+                    "id": 2180,
+                    "name": "VariableDeclaration",
+                    "src": "306:7:17"
+                  }
+                ],
+                "id": 2181,
+                "name": "ParameterList",
+                "src": "305:9:17"
+              }
+            ],
+            "id": 2182,
+            "name": "FunctionDefinition",
+            "src": "260:55:17"
+          },
+          {
+            "attributes": {
+              "body": null,
+              "documentation": null,
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "EUR",
+              "scope": 2204,
+              "stateMutability": "view",
+              "superFunction": null,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_id",
+                      "scope": 2189,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint",
+                          "type": "uint256"
+                        },
+                        "id": 2183,
+                        "name": "ElementaryTypeName",
+                        "src": "334:4:17"
+                      }
+                    ],
+                    "id": 2184,
+                    "name": "VariableDeclaration",
+                    "src": "334:8:17"
+                  }
+                ],
+                "id": 2185,
+                "name": "ParameterList",
+                "src": "333:10:17"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 2189,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 2186,
+                        "name": "ElementaryTypeName",
+                        "src": "367:7:17"
+                      }
+                    ],
+                    "id": 2187,
+                    "name": "VariableDeclaration",
+                    "src": "367:7:17"
+                  }
+                ],
+                "id": 2188,
+                "name": "ParameterList",
+                "src": "366:9:17"
+              }
+            ],
+            "id": 2189,
+            "name": "FunctionDefinition",
+            "src": "321:55:17"
+          },
+          {
+            "attributes": {
+              "body": null,
+              "documentation": null,
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "GBP",
+              "scope": 2204,
+              "stateMutability": "view",
+              "superFunction": null,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_id",
+                      "scope": 2196,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint",
+                          "type": "uint256"
+                        },
+                        "id": 2190,
+                        "name": "ElementaryTypeName",
+                        "src": "395:4:17"
+                      }
+                    ],
+                    "id": 2191,
+                    "name": "VariableDeclaration",
+                    "src": "395:8:17"
+                  }
+                ],
+                "id": 2192,
+                "name": "ParameterList",
+                "src": "394:10:17"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 2196,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 2193,
+                        "name": "ElementaryTypeName",
+                        "src": "428:7:17"
+                      }
+                    ],
+                    "id": 2194,
+                    "name": "VariableDeclaration",
+                    "src": "428:7:17"
+                  }
+                ],
+                "id": 2195,
+                "name": "ParameterList",
+                "src": "427:9:17"
+              }
+            ],
+            "id": 2196,
+            "name": "FunctionDefinition",
+            "src": "382:55:17"
+          },
+          {
+            "attributes": {
+              "body": null,
+              "documentation": null,
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "updatedAt",
+              "scope": 2204,
+              "stateMutability": "view",
+              "superFunction": null,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_id",
+                      "scope": 2203,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint",
+                          "type": "uint256"
+                        },
+                        "id": 2197,
+                        "name": "ElementaryTypeName",
+                        "src": "462:4:17"
+                      }
+                    ],
+                    "id": 2198,
+                    "name": "VariableDeclaration",
+                    "src": "462:8:17"
+                  }
+                ],
+                "id": 2199,
+                "name": "ParameterList",
+                "src": "461:10:17"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 2203,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint",
+                          "type": "uint256"
+                        },
+                        "id": 2200,
+                        "name": "ElementaryTypeName",
+                        "src": "495:4:17"
+                      }
+                    ],
+                    "id": 2201,
+                    "name": "VariableDeclaration",
+                    "src": "495:4:17"
+                  }
+                ],
+                "id": 2202,
+                "name": "ParameterList",
+                "src": "494:6:17"
+              }
+            ],
+            "id": 2203,
+            "name": "FunctionDefinition",
+            "src": "443:58:17"
+          }
+        ],
+        "id": 2204,
+        "name": "ContractDefinition",
+        "src": "159:344:17"
+      }
+    ],
+    "id": 2205,
+    "name": "SourceUnit",
+    "src": "0:504:17"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.17+commit.d19bba13.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.6",
+  "updatedAt": "2022-03-26T02:06:59.706Z",
+  "devdoc": {
+    "methods": {},
+    "title": "FiatContractInterface"
+  },
+  "userdoc": {
+    "methods": {},
+    "notice": "Interface for third-party contract FiatContract (see: https://fiatcontract.com/)"
+  }
+}

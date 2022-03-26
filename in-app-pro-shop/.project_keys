@@ -1,0 +1,4 @@
+module.exports = {
+    mnemonic: "cabbage inflict doctor valve address roast bring club fiber celery lab render",
+    infura_project: "YOUR_INFURA_PROJECT_ID_HERE"
+}
